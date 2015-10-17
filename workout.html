@@ -1,0 +1,70 @@
+<html>
+<head>
+<style>
+p { font-size:72pt; text-align: center; color:white }
+body{ background-color:black }
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(window).resize(function(){
+$('.centered_div').css({
+position:'absolute',
+left: ($(window).width() - $('.centered_div').outerWidth())/2,
+top: ($(window).height() - $('.centered_div').outerHeight())/2
+});
+$('.lower_div').css({
+position:'absolute',
+left: ($(window).width() - $('.lower_div').outerWidth())/2,
+top: 3*(($(window).height() - $('.lower_div').outerHeight())/4)
+});
+});
+$(window).resize();
+$(window).resize(); // won't initialize right otherwise for some reason
+});
+</script>
+</head>
+<body>
+<div class="centered_div">
+<script>
+var reversible_move_list = ["Bas #1", "Bas #2", "Bas #3", "Bas #4", "Jab, cross, bursting rear elbow #1" 
+	//"Front groin kick"
+	//, "Rear groin kick", 
+	,"Front groin kick, jab, cross"
+	//, "Rear roundhouse"
+	//, "Front roundhouse"
+	//, "Shuffle front groin kick, jab, cross", 
+	, "Dual hook punches", "Jab, hook, down hammer, rear knee"
+	//, "Rear roundhouse into opposite, jab, cross", 
+	, "Front roundhouse, front side hammer, cross", "Low roundhouse, mid roundhouse, high roundhouse"
+	//"Jab, jab, front side kick"
+	, "Jab, jab, cross", "Jab, jab, cross, cross", "Jab, jab x 2, jab x 3", "Cross, cross x 2, cross x 3", "Jab, hook"
+	, "Offensive front kick, jab, cross, elbow #1"
+	//, "Advancing side kick, jab, cross, elbow #1"
+	//, "Rear kick, elbow #3, elbow #8", 
+	,"Slipping front body blow, low hook", "Slipping rear body blow, low hook" 
+	,"Straight blasts", "5 straights, squat"
+	//, "Front bursting knee, dual elbows"
+	];
+
+var reversed_move_list = [];
+for (var i=0;i<reversible_move_list.length;i++) {
+reversed_move_list.push("REVERSE "+reversible_move_list[i]);
+}
+
+var optional_move_list = ["Rope", "Push-ups", "Dips" 
+							//,"Pull-ups", "Switch knees", "Retsev"
+						];
+
+var move_list = reversible_move_list.concat(optional_move_list,reversed_move_list);
+document.write("<p>"+move_list[Math.floor(Math.random() * move_list.length)]+"</p>");
+</script>
+</div>
+<div class="lower_div">
+<button type="button" style="background-color:gray; text-align:center; color:white; height: 50px; width: 500px" onClick="document.location.reload(true)" autofocus="1">Reload</button>
+<form >
+</form>
+</div>
+</body>
+
+</html>

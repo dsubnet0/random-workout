@@ -4,7 +4,7 @@
 p { font-size:72pt; text-align: center; color:white }
 body{ background-color:black }
 </style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<!- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script> -->
 <script type="text/javascript">
 $(document).ready(function(){
 $(window).resize(function(){
@@ -27,33 +27,90 @@ $(window).resize(); // won't initialize right otherwise for some reason
 <body>
 <div class="centered_div">
 <script>
-var reversible_move_list = ["Bas #1", "Bas #2", "Bas #3", "Bas #4", "Jab, cross, bursting rear elbow #1" 
-	//"Front groin kick"
-	//, "Rear groin kick", 
-	,"Front groin kick, jab, cross"
-	//, "Rear roundhouse"
-	//, "Front roundhouse"
-	//, "Shuffle front groin kick, jab, cross", 
-	, "Dual hook punches", "Jab, hook, down hammer, rear knee"
-	//, "Rear roundhouse into opposite, jab, cross", 
-	, "Front roundhouse, front side hammer, cross", "Low roundhouse, mid roundhouse, high roundhouse"
-	//"Jab, jab, front side kick"
-	, "Jab, jab, cross", "Jab, jab, cross, cross", "Jab, jab x 2, jab x 3", "Cross, cross x 2, cross x 3", "Jab, hook"
-	, "Offensive front kick, jab, cross, elbow #1"
-	//, "Advancing side kick, jab, cross, elbow #1"
-	//, "Rear kick, elbow #3, elbow #8", 
-	,"Slipping front body blow, low hook", "Slipping rear body blow, low hook" 
-	,"Straight blasts", "5 straights, squat"
-	//, "Front bursting knee, dual elbows"
+var reversible_move_list = [ 
+	"Jab, cross, hook", //"Jab, cross, hook, cross",
+	"Jab, cross, bursting rear elbow #1", 
+	"Lead groin kick", "Rear groin kick",
+	"Rear roundhouse", "Lead roundhouse",
+	"Rear knee", "Lead knee",
+	"Jab", "Lead hook", "Rear hook",
+	"Lead upper","Rear upper","Lead elbow","Rear elbow",
+	"Lead groin kick, jab, cross",
+	"Dual hook punches",
+	//"Slip, side hammer, hook, elbow",
+	"Low roundhouse, mid roundhouse, high roundhouse",
+	//"Jab, jab, cross", "Jab, jab, cross, cross", 
+	//"Jab, jab x 2, jab x 3", "Cross, cross x 2, cross x 3", ,
+    "Slipping front body blow, low hook", "Slipping rear body blow, low hook",
+	"Jab, cross, hook, cross, hook",
+	"Jab, cross, liver shot, lead hook, rear elbow",
+	"Cross, jab, lead roundhouse",
+	"Double jab, spleen shot, rear uppercut",
+	"Lead hook, elbow, liver shot, rear knee",
+	"Jab, cross, sprawl", "Jab, cross, hook, sprawl", "Jab, cross, hook, hook, sprawl",
+	//"Upper-body retsev",
+	"Shadowbox/Freestyle",
+	"KNIFE: Jab, cross", "KNIFE: Jab, cross, hook, upper",
+	"Side kick", "Back kick",
+	"NUNCHAKU: One-hand combination spins", 
+	"Cross, hook, cross", "Hook, cross, hook","Overhand, uppercut, overhand", "High hook, low hook, high hook", "Rear upper, hook, cross",
+	"Lead elbow, knee, rear elbow, switch knee, clinch knees, elbow #3",
+	"Jab, rear roundhouse, cross, switch roundhouse, lead hook, roundhouse, overhand, roundhouse",
+	"Jab, cross, slipping jab, cross, hook, cross, takedown",
+	"Jab, cross, slipping cross, hook, cross, hook, takedown",
+	"KB one-handed snatch", "KB one-handed swing", "KB one-handed clean", "KB one-handed thruster", 
+	"KB one-handed swinging high pull",
+	"BAND one-hand lateral raise",
+    
 	];
 
 var reversed_move_list = [];
 for (var i=0;i<reversible_move_list.length;i++) {
-reversed_move_list.push("REVERSE "+reversible_move_list[i]);
+reversed_move_list.push("OPPOSITE "+reversible_move_list[i]);
 }
 
-var optional_move_list = ["Rope", "Push-ups", "Dips" 
-							//,"Pull-ups", "Switch knees", "Retsev"
+var optional_move_list = ["Rope", "Push-ups", "Wide push-ups", "Diamond push-ups","Hindu push-ups", 
+								"Reptile push-ups", "SPEAR push-up sequence",
+							"Dips"
+							, "Switch knees", "Switch roundhouses" 
+							, "Squats", "Pistol squats", "Jump tuck squats", "Squat jumps", "Tuck jumps"
+							, "Forward lunges", "Backward lunges", "Twisting lunges", "Jump lunges",
+							"Jacks"
+							, "Reaching crunches", "Feet-raised crunches", "Candlestick crunches",
+							"Reverse crunches", "Leg lifts", "Long arm crunches",
+							"Bicycle", 
+							"Mountain climbers", "Boat extensions", "X-ups", "Russian twist", "Spiderman crunch", "V-ups", "Flutter kicks", "Heel touches", 
+							"High knees",
+							"Cross-body mountain climbers",
+							"Extended plank", "Forearm plank",
+							"Calf raises",
+							"Bear-crab roll",
+							"Burpees",
+							"Bag lift",
+							"Box Thai knees",
+							
+							"NUNCHAKU: Combination wraps and switches",
+							
+							"Box jumps","Lateral box jumps",
+							"Box-weighted lunges","Box push-ups","Box dips",
+			                "Box-weighted squat press", "Box-weighted burpee press", "Box burpees",
+							"Box single-side stepdown lunges",
+							
+							"Ball squat press","Ball push-ups","Ball burpees",
+							"Ball tricep extensions","Ball bicep curl", "Ball standing twist",
+							"Ball V-ups","Ball twists","Ball crunches","Ball plank",
+							
+							"Hip-outs",
+							"Spiderman lunge",
+							"Upas", "Butt bridges",
+							
+							"KB swings", "KB twist press", "KB deadlift", "KB standing Russian twist", 
+								"KB Russian twist", "KB goblet squat", "KB bob & weave", "KB squat and press",
+								"KB reverse lunge and press", "KB two-handed high pull",
+							
+							"BAND: Bicep curl", "BAND: Front raise"
+								
+							
 						];
 
 var move_list = reversible_move_list.concat(optional_move_list,reversed_move_list);
@@ -61,7 +118,7 @@ document.write("<p>"+move_list[Math.floor(Math.random() * move_list.length)]+"</
 </script>
 </div>
 <div class="lower_div">
-<button type="button" style="background-color:gray; text-align:center; color:white; height: 50px; width: 500px" onClick="document.location.reload(true)" autofocus="1">Reload</button>
+<center><button type="button" style="background-color:gray; text-align:center; color:white; height: 50px; width: 500px" onClick="document.location.reload(true)" autofocus="1">Reload</button> </center>
 <form >
 </form>
 </div>

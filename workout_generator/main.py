@@ -12,7 +12,11 @@ class Move(object):
 def oppositize(move_list):
     oppositized_list = []
     for m in move_list:
-        oppositized_list.append(f'OPPOSITE {m}')
+        new_move = Move(name=f'OPPOSITE {m.name}', 
+                    reversible=m.reversible,
+                    quietable=m.quietable,
+                    opener=m.opener)
+        oppositized_list.append(new_move)
     return oppositized_list
 
 MOVE_LIST = []
@@ -52,7 +56,10 @@ appendMove([
     'Squats',
     'Rope',
     'High knees',
-    'Jacks'
+    'Jacks',
+    'PVC twists',
+    'PVC slips',
+    'PVC twist squats'
     ], 
     reversible=False, quietable=True, opener=True)
 
@@ -137,13 +144,16 @@ appendMove([
 
     "BAND: Bicep curl", 
     "BAND: Front raise"
-    
     ],
     reversible=False, quietable=True, opener=False)
 
 appendMove([
-    'Lead roundhouse', 'Rear roundhouse','Jab, cross, roundhouse', 'Cross, jab, lead roundhouse',                
-    'Lead groin kick', 'Rear groin kick',
+    'Lead roundhouse', 
+    'Rear roundhouse',
+    'Jab, cross, roundhouse', 
+    'Cross, jab, lead roundhouse',                
+    'Lead groin kick', 
+    'Rear groin kick',
     'Lead groin kick, jab, cross',
     'Low roundhouse, mid roundhouse, high roundhouse',
     'Jab, rear roundhouse, cross, switch roundhouse',
@@ -151,13 +161,22 @@ appendMove([
     reversible=True, quietable=False)
 
 
-number_of_rounds = 12
+parser = argparse.ArgumentParser()
+parser.add_argument('--quietable', help='Quietable only', action='store_true')
+args = parser.parse_args()
+
+number_of_rounds = 18
 my_workout = []
 my_workout.append(random.choice([m.name for m in MOVE_LIST if m.opener==True]))
 
+MOVE_LIST = MOVE_LIST + oppositize([m for m in MOVE_LIST if m.reversible==True])
 
+print(f'Total move list size: {len(MOVE_LIST)}')
 for r in range(number_of_rounds-1):
-#    print(random.choice([m.name for m in MOVE_LIST if m.quietable==True]))
-    my_workout.append(random.choice([m.name for m in MOVE_LIST]))
+    if args.quietable:
+        my_workout.append(random.choice([m.name for m in MOVE_LIST if m.quietable==True]))
+    else:
+        my_workout.append(random.choice([m.name for m in MOVE_LIST]))
 
-print(my_workout)
+for m in my_workout:
+    print(m)

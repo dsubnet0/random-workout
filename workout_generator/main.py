@@ -174,17 +174,24 @@ parser.add_argument('--quietable', help='Quietable only', action='store_true')
 args = parser.parse_args()
 
 number_of_rounds = 18
+keep_balanced = True
 my_workout = []
 my_workout.append(random.choice([m.name for m in MOVE_LIST if m.opener==True]))
 
-MOVE_LIST = MOVE_LIST + oppositize([m for m in MOVE_LIST if m.reversible==True])
+#MOVE_LIST = MOVE_LIST + oppositize([m for m in MOVE_LIST if m.reversible==True])
+reversible_moves = [m.name for m in MOVE_LIST if m.reversible==True]
 
-print(f'Total move list size: {len(MOVE_LIST)}')
-for r in range(number_of_rounds-1):
+#print(f'Total move list size: {len(MOVE_LIST)}')
+#for r in range(number_of_rounds-1):
+while len(my_workout) < 18:
+    next_move = ''
     if args.quietable:
-        my_workout.append(random.choice([m.name for m in MOVE_LIST if m.quietable==True]))
+        next_move = random.choice([m.name for m in MOVE_LIST if m.quietable==True])
+        #my_workout.append(random.choice([m.name for m in MOVE_LIST if m.quietable==True]))
     else:
-        my_workout.append(random.choice([m.name for m in MOVE_LIST]))
-
+        next_move = random.choice([m.name for m in MOVE_LIST])
+    my_workout.append(next_move)
+    if keep_balanced and next_move in reversible_moves and len(my_workout)<18:
+        my_workout.append('OPPOSITE '+ next_move)
 for m in my_workout:
     print(m)

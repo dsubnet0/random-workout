@@ -47,7 +47,8 @@ appendMove([
     'KB one-handed clean',
     'KB one-handed thruster',
     'KB one-handed swing high pull',
-    'BAND one-handed lateral raise'
+    'BAND one-handed lateral raise',
+    'SPEAR oblique situp'
     ],
     reversible=True, quietable=True)
 
@@ -58,8 +59,7 @@ appendMove([
     'High knees',
     'Jacks',
     'PVC twists',
-    'PVC slips',
-    'PVC twist squats'
+    'PVC slips'
     ], 
     reversible=False, quietable=True, opener=True)
 
@@ -98,7 +98,8 @@ appendMove([
     "Russian twist", 
     "Spiderman crunch", 
     "Flutter kicks", 
-    "Heel touches", 
+    "Heel touches",
+    "Palm strike situps", 
 
 	"Extended plank", 
     "Forearm plank",
@@ -111,6 +112,8 @@ appendMove([
 	"Spiderman lunge",
 	"Upas", 
     "Butt bridges",
+    "SPEAR situp",
+    "Candlesticks",
 
 	"Box Thai knees",
     'Box jumps',
@@ -143,7 +146,12 @@ appendMove([
     "KB two-handed high pull",
 
     "BAND: Bicep curl", 
-    "BAND: Front raise"
+    "BAND: Front raise",
+    "BAND: SPEAR situp",
+    "BAND: Palm strikes",
+    "BAND: Ground side kick",
+    "BAND: Ground front kick",
+    "BAND: Palm strike situps"
     ],
     reversible=False, quietable=True, opener=False)
 

@@ -178,16 +178,13 @@ keep_balanced = True
 my_workout = []
 my_workout.append(random.choice([m.name for m in MOVE_LIST if m.opener==True]))
 
-#MOVE_LIST = MOVE_LIST + oppositize([m for m in MOVE_LIST if m.reversible==True])
 reversible_moves = [m.name for m in MOVE_LIST if m.reversible==True]
 
 #print(f'Total move list size: {len(MOVE_LIST)}')
-#for r in range(number_of_rounds-1):
 while len(my_workout) < 18:
     next_move = ''
     if args.quietable:
         next_move = random.choice([m.name for m in MOVE_LIST if m.quietable==True])
-        #my_workout.append(random.choice([m.name for m in MOVE_LIST if m.quietable==True]))
     else:
         next_move = random.choice([m.name for m in MOVE_LIST])
     my_workout.append(next_move)

@@ -31,13 +31,13 @@ appendMove([
     'Rear knee', 'Lead knee', 'Rear elbow', 'Lead elbow',
     'Dual hook punches', 'Hook, cross, hook', 'Cross, hook, cross',
     'Jab, cross, liver shot, lead hook, rear elbow', 
-    'Double jab', 'Double jab, spleet shot, rear uppercut',
+    'Double jab', 'Double jab, spleen shot, rear uppercut',
     'Lead hook, elbow, liver shot, rear knee',
     'Jab, cross, sprawl', 'Jab, cross, hook, sprawl', 'Jab, cross, hook, hook, sprawl',
-    'Side kick', 'Back kick',
+    'Side kick', 
     'Overhand, uppercut, overhand',
     'High hook, low hook, high hook',
-    'Rear upper, hook, cross'
+    'Rear upper, hook, cross',
     'Lead elbow, knee, rear elbow, switch knee', 
     'Jab, cross, slipping jab, cross, hook, cross, takedown',
     'Jab, cross, slipping cross, hook, cross, hook, takedown',
@@ -48,7 +48,11 @@ appendMove([
     'KB one-handed thruster',
     'KB one-handed swing high pull',
     'BAND one-handed lateral raise',
-    'SPEAR oblique situp'
+    'SPEAR oblique situp',
+    'Ground side kick',
+    'Ground front kick',
+    'BAND: Ground side kick',
+    'BAND: Ground front kick',
     ],
     reversible=True, quietable=True)
 
@@ -72,6 +76,7 @@ appendMove([
 	"Dips",
     
 	"Switch knees", 
+    "Back kicks",
 
 	"Squats", 
     "Pistol squats", 
@@ -88,12 +93,14 @@ appendMove([
     "Candlestick crunches",
     "Leg lifts", 
     "Long arm crunches",
+    'Alternating precision SPEAR crunches',
 	"Bicycle", 
     "X-ups", 
     "V-ups", 
 
 	"Mountain climbers", 
 	"Cross-body mountain climbers",
+    "SPEAR mountain climbers",
     "Boat extensions", 
     "Russian twist", 
     "Spiderman crunch", 
@@ -117,11 +124,9 @@ appendMove([
 
 	"Box Thai knees",
     'Box jumps',
-    'Box-weighted lunges',
     'Box push-ups',
     'Box dips',
     'Box-weighted squat press',
-    'Box-weighted burpee press',
     'Box burpees',
 
     'Ball squat press',
@@ -149,8 +154,6 @@ appendMove([
     "BAND: Front raise",
     "BAND: SPEAR situp",
     "BAND: Palm strikes",
-    "BAND: Ground side kick",
-    "BAND: Ground front kick",
     "BAND: Palm strike situps"
     ],
     reversible=False, quietable=True, opener=False)
@@ -162,6 +165,8 @@ appendMove([
     'Cross, jab, lead roundhouse',                
     'Lead groin kick', 
     'Rear groin kick',
+    'Lead front kick',
+    'Rear front kick',
     'Lead groin kick, jab, cross',
     'Low roundhouse, mid roundhouse, high roundhouse',
     'Jab, rear roundhouse, cross, switch roundhouse',

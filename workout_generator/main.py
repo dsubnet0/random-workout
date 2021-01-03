@@ -1,13 +1,17 @@
 import random
 import argparse
 
+MOVE_LIST = []
+
 class Move(object):
-    def __init__(self, name, reversible=False, weightable=False, quietable=True, opener=False):
+    def __init__(self, name, reversible=False, bag=False, quietable=True, opener=False, kb=False, ground=False):
         self.name = name
         self.reversible = reversible
-        self.weightable = weightable
+        self.bag = bag
         self.quietable = quietable
         self.opener = opener
+        self.kb = kb
+        self.ground = ground
 
 def oppositize(move_list):
     oppositized_list = []
@@ -15,23 +19,28 @@ def oppositize(move_list):
         new_move = Move(name=f'OPPOSITE {m.name}', 
                     reversible=m.reversible,
                     quietable=m.quietable,
-                    opener=m.opener)
+                    opener=m.opener,
+                    bag=m.bag,
+                    ground=m.ground)
         oppositized_list.append(new_move)
     return oppositized_list
 
-MOVE_LIST = []
-def appendMove(move_list, reversible=False, quietable=True, weightable=False, opener=False):
+def appendMove(move_list, reversible=False, quietable=True, bag=False, opener=False, kb=False, ground=False):
     for m in move_list:
-        MOVE_LIST.append(Move(m, reversible=reversible, quietable=quietable, weightable=weightable, opener=opener))
+        MOVE_LIST.append(Move(m, reversible=reversible, 
+                                    quietable=quietable, 
+                                    bag=bag, 
+                                    opener=opener,
+                                    ground=ground))
 
 appendMove([
     'Jab', 'Double jab', 'Cross', 'Lead hook', 'Rear hook', 'Lead upper', 'Rear upper', 
     'Slipping jab, low hook', 'Slipping cross, low hook',
-    'KB one-handed swing', 'Jab, cross, hook', 'Jab, cross, bursting rear elbow',
+    'Jab, cross, hook', 'Jab, cross, bursting rear elbow',
     'Rear knee', 'Lead knee', 'Rear elbow', 'Lead elbow',
     'Dual hook punches', 'Hook, cross, hook', 'Cross, hook, cross',
     'Jab, cross, liver shot, lead hook, rear elbow', 
-    'Double jab', 'Double jab, spleen shot, rear uppercut',
+    'Double jab, spleen shot, rear uppercut',
     'Lead hook, elbow, liver shot, rear knee',
     'Jab, cross, sprawl', 'Jab, cross, hook, sprawl', 'Jab, cross, hook, hook, sprawl',
     'Side kick', 
@@ -126,7 +135,6 @@ appendMove([
     'Box jumps',
     'Box push-ups',
     'Box dips',
-    'Box-weighted squat press',
     'Box burpees',
 
     'Ball squat press',

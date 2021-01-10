@@ -24,8 +24,9 @@ with open(os.path.join(script_dir, 'move_list.json')) as move_json:
         else:
             next_move = random.choice([m['name'] for m in move_list])
         my_workout.append(next_move)
-        if KEEP_BALANCED and next_move in [m['name'] for m in move_list if 'reversible' in m and m['reversible']]:
+        if KEEP_BALANCED and len(my_workout)<NUMBER_OF_ROUNDS and next_move in [m['name'] for m in move_list if 'reversible' in m and m['reversible']]:
             my_workout.append('OPPOSITE ' + next_move)
-
+i=1
 for m in my_workout:
-    print(m)
+    print(f'{i}: {m}')
+    i+=1

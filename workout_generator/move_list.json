@@ -98,7 +98,6 @@
     {"name": "Jab, cross, hook, hook, sprawl", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Side kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Front kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Back kick", "quietable": 1, "bag": 1, "reversible":0},
 
     {"name": "Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
@@ -107,11 +106,10 @@
     {"name": "Cross, jab, lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead groin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear groin kick", "quietable": 0, "bag": 1, "reversible":1},
-    {"name": "Rear front kick", "quietable": 0, "bag": 1, "reversible":1},
-    {"name": "Lead front kick", "quietable": 0, "bag": 1, "reversible":1},
+    {"name": "Rear front kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Lead front kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead groin kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead front kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
-    {"name": "Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
 
     {"name": "KB one-handed snatch", "quietable": 1, "kb": 1, "reversible":1},
@@ -128,7 +126,7 @@
     {"name": "KB goblet squat", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB bob and weave", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB squat and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
-    {"name": "KB reverse lung and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
+    {"name": "KB reverse lunge and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB two-handed high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     
     {"name": "BAND: one-handed lateral raise", "quietable": 1, "band": 1, "reversible":1},

@@ -1,1 +1,1 @@
-web: gunicorn app:serve
+web: python workout_generator/serve.py $PORT

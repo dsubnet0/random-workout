@@ -1,1 +1,1 @@
-web: python workout_generator/serve.py $PORT
+web: python serve.py $PORT

@@ -1,1 +1,1 @@
-web: export FLASK_APP=workout_generator.serve.py && flask run --host=0.0.0.0
+web: gunicorn app:serve

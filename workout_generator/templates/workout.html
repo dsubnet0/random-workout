@@ -1,0 +1,12 @@
+<!doctype html>
+<style>
+    p { font-size:18pt; margin-left: 30%; color:white }
+    body{ background-color:black }
+</style>
+<body>
+{% for w in workout_array %}
+    <p>
+        {{ loop.index }}: {{ w }}
+    </p>
+{% endfor %}
+</body>

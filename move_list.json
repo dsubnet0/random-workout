@@ -118,7 +118,7 @@
     {"name": "KB one-handed clean", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed thruster", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed swing high pull", "quietable": 1, "kb": 1, "reversible":1},
-    {"name": "KB swings", "quietable": 1, "kb": 1, "reversible":0},
+    {"name": "KB swings", "quietable": 1, "kb": 1, "reversible":0, "opener":1},
     {"name": "KB twist press", "quietable": 1, "kb": 1, "reversible":0},
     {"name": "KB deadlift", "quietable": 1, "kb": 1, "reversible":0},
     {"name": "KB standing twist", "quietable": 1, "kb": 1, "reversible":0},

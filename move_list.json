@@ -116,6 +116,7 @@
 
     {"name": "KB one-handed snatch", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed swing", "quietable": 1, "kb": 1, "reversible":1},
+    {"name": "KB alternating one-handed swing", "quietable": 1, "kb": 1, "reversible":0},
     {"name": "KB one-handed snatch", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed clean", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed thruster", "quietable": 1, "kb": 1, "reversible":1},
@@ -145,7 +146,6 @@
     {"name": "Ground bottom oblique front kick", "quietable": 1, "ground": 1, "reversible":1},
     {"name": "Ground top x-axis shin kick", "quietable": 1, "ground": 1, "reversible":1},
     {"name": "Ground bottom x-axis shin kick", "quietable": 1, "ground": 1, "reversible":1},
-    {"name": "BAND: Ground side kick", "quietable": 1, "band": 1, "ground": 1, "reversible":1},
     
     {"name": "BOX Thai knees", "quietable": 1, "band": 0, "ground": 0, "reversible":0, "box":1},
     {"name": "BOX jumps", "quietable": 1, "band": 0, "ground": 0, "reversible":0, "box":1},

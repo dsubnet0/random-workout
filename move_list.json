@@ -15,6 +15,7 @@
     {"name": "Box dips", "quietable": 1, "bag": 0, "box": 1, "reversible":0, "opener":0},
 
     {"name": "Squats", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
+    {"name": "Squat hold", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Pistol squats", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Squat jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Tuck jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
@@ -47,6 +48,7 @@
 
     {"name": "Extended plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Forearm plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Rotating plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
 
     {"name": "Calf raises", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Bear-crab roll", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
@@ -137,6 +139,8 @@
     {"name": "BAND: front raise", "quietable": 1, "band": 1, "reversible":0},
     {"name": "BAND: palm strikes", "quietable": 1, "band": 1, "reversible":1},
     {"name": "BAND: palm strike situps", "quietable": 1, "band": 1, "ground":1, "reversible":0},
+    {"name": "BAND: seated row", "quietable": 1, "band": 1, "ground":1, "reversible":0},
+    {"name": "BAND: seated fly", "quietable": 1, "band": 1, "ground":1, "reversible":0},
 
     {"name": "SPEAR oblique situp", "quietable": 1, "ground": 1, "reversible":1},
     {"name": "Ground side kick", "quietable": 1, "ground": 1, "reversible":1},

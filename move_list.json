@@ -20,8 +20,12 @@
     {"name": "Squat jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Tuck jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
-    {"name": "Forward lunges", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
+    {"name": "Forward lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
+    {"name": "Forward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
+    {"name": "MED BALL Forward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Backward lunges", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
+    {"name": "Backward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
+    {"name": "MED BALL Backward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Twisting lunges", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Jump lunges", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
@@ -68,11 +72,14 @@
     {"name": "Lead upper", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear upper", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead knee", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "MED BALL Lead knee", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear knee", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "MED BALL Rear knee", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead elbow", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear elbow", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Switch knees", "quietable": 1, "bag": 1, "reversible":0},
+    {"name": "MED BALL Switch knees", "quietable": 1, "bag": 1, "reversible":0},
     
     {"name": "Dual hooks", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Hook, cross, hook", "quietable": 1, "bag": 1, "reversible":1},
@@ -103,7 +110,9 @@
     {"name": "Back kick", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
+    {"name": "MED BALL Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear roundhouse", "quietable": 0, "bag": 1, "reversible":1},
+    {"name": "MED BALL Rear roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead x-axis shin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear x-axis shin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Jab, cross, roundhouse", "quietable": 0, "bag": 1, "reversible":1},
@@ -115,11 +124,11 @@
     {"name": "Lead groin kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead front kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
+    {"name": "MED BALL Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
 
     {"name": "KB one-handed snatch", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed swing", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB alternating one-handed swing", "quietable": 1, "kb": 1, "reversible":0},
-    {"name": "KB one-handed snatch", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed clean", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed thruster", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed swing high pull", "quietable": 1, "kb": 1, "reversible":1},
@@ -133,6 +142,8 @@
     {"name": "KB squat and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB reverse lunge and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB two-handed high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
+    {"name": "KB lunging one-handed row", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
+    {"name": "KB one-handed shoulder press", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
     
     {"name": "BAND: one-handed lateral raise", "quietable": 1, "band": 1, "reversible":1},
     {"name": "BAND: bicep curl", "quietable": 1, "band": 1, "reversible":0},

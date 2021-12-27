@@ -185,5 +185,9 @@
 
     {"name": "Retsev", "quietable": 0, "ground": 0, "reversible":0, "ball":0},
     {"name": "Knee-on-belly Ground & pound", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
-    {"name": "Mount Ground & pound", "quietable": 0, "ground": 1, "reversible":0, "ball":0}
+    {"name": "Mount Ground & pound", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
+    {"name": "DL GROUND Jab, cross, hook, over", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
+    {"name": "DL GROUND Jab, hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
+    {"name": "DL GROUND Jab, hammer, hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
+    {"name": "DL GROUND Jab, hammer, hammer, outer hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0}
 ]}

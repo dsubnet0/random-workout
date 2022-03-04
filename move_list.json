@@ -156,6 +156,9 @@
     {"name": "Snap kick, wheel kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Snap kick, side kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Snap kick, hook kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Snap kick, side kick, rear kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Low wheel kick, high wheel kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "High wheel kick, low wheel kick", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "MED BALL Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},

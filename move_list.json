@@ -29,7 +29,6 @@
     {"name": "Backward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "MED BALL Backward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Twisting lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
-    {"name": "Jump lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
     {"name": "Reaching crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Feet-raised crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
@@ -83,18 +82,12 @@
     {"name": "Lead elbow", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear elbow", "quietable": 1, "bag": 1, "reversible":1},
 
-    {"name": "Lead back fist", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Rear back fist", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Lead inverted punch", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Rear inverted punch", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Lead back hand", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Rear back hand", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead knife hands", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear knife hands", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead ridge hands", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear ridge hands", "quietable": 1, "bag": 1, "reversible":1},
 
-    {"name": "Switch knees", "quietable": 1, "bag": 1, "reversible":0},
+    {"name": "Standing switch knees", "quietable": 1, "bag": 1, "reversible":0},
     {"name": "Clinch Switch knees", "quietable": 1, "bag": 1, "reversible":0},
     {"name": "MED BALL Switch knees", "quietable": 1, "bag": 1, "reversible":0},
     
@@ -181,7 +174,7 @@
     {"name": "KB bob and weave", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB squat and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB reverse lunge and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
-    {"name": "KB two-handed high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
+    {"name": "KB two-handed swings high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB lunging one-handed row", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
     {"name": "KB one-handed shoulder press", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
     
@@ -218,10 +211,9 @@
     {"name": "BALL plank", "quietable": 1, "ground": 1, "reversible":0, "ball":1},
 
     {"name": "Retsev", "quietable": 0, "ground": 0, "reversible":0, "ball":0},
-    {"name": "Knee-on-belly Ground & pound", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
-    {"name": "Mount Ground & pound", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
+    {"name": "Ground & pound", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
     {"name": "DL GROUND Jab, cross, hook, over", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
-    {"name": "DL GROUND Jab, hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
-    {"name": "DL GROUND Jab, hammer, hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0},
-    {"name": "DL GROUND Jab, hammer, hammer, outer hammer", "quietable": 0, "ground": 1, "reversible":1, "ball":0}
+    {"name": "DL GROUND Jab, hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
+    {"name": "DL GROUND Jab, hammer, hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
+    {"name": "DL GROUND Jab, hammer, hammer, outer hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0}
 ]}

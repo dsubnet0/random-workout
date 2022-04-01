@@ -2,6 +2,8 @@
     {"name": "Rope", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "High knees", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "Jacks", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
+    {"name": "Boxer shuffle", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
+    {"name": "Invisible jump rope", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "PVC twists", "quietable": 1, "bag": 0, "pvc": 1, "reversible":0, "opener":1},
     {"name": "FIREFIGHTER CARRY twists", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
     {"name": "PVC slips", "quietable": 1, "bag": 0, "pvc": 1, "reversible":0, "opener":0},

@@ -1,26 +1,24 @@
 import argparse
-import json
-import os
 import random
+
+from move_list import MOVE_LIST
+
 
 def generate_workout(number_of_rounds=1, quietable_only=False, keep_balanced=True):
     my_workout = []
-    script_dir = os.path.dirname(__file__)
-    with open(os.path.join(script_dir, 'move_list.json')) as move_json:
-        move_data = json.load(move_json)
-        move_list = move_data['move_list']
+    move_list = MOVE_LIST
 
-        my_workout.append(random.choice([m['name'] for m in move_list if 'opener' in m and m['opener']]))
+    my_workout.append(random.choice([m['name'] for m in move_list if 'opener' in m and m['opener']]))
 
-        while len(my_workout) < number_of_rounds:
-            next_move = ''
-            if quietable_only:
-                next_move = random.choice([m['name'] for m in move_list if 'quietable' in m and m['quietable']])
-            else:
-                next_move = random.choice([m['name'] for m in move_list])
-            my_workout.append(next_move)
-            if keep_balanced and len(my_workout)<number_of_rounds and next_move in [m['name'] for m in move_list if 'reversible' in m and m['reversible']]:
-                my_workout.append('OPPOSITE ' + next_move)
+    while len(my_workout) < number_of_rounds:
+        next_move = ''
+        if quietable_only:
+            next_move = random.choice([m['name'] for m in move_list if 'quietable' in m and m['quietable']])
+        else:
+            next_move = random.choice([m['name'] for m in move_list])
+        my_workout.append(next_move)
+        if keep_balanced and len(my_workout)<number_of_rounds and next_move in [m['name'] for m in move_list if 'reversible' in m and m['reversible']]:
+            my_workout.append('OPPOSITE ' + next_move)
     return my_workout
 
 def stringify_workout(workout_array):

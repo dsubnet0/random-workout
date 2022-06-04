@@ -1,7 +1,9 @@
 import os
+
 from flask import Flask, render_template
 
-from main import generate_workout,stringify_workout
+from main import generate_workout, stringify_workout
+
 app = Flask('Doug''s Workout Generator')
 
 @app.route('/raw')

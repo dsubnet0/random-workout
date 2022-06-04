@@ -1,4 +1,4 @@
-{"move_list": [
+MOVE_LIST = [
     {"name": "Rope", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "High knees", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "Jacks", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
@@ -44,7 +44,7 @@
     {"name": "Spiderman crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "SPEAR situps", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
 
-    {"name": "Mountain climbers", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Mountain climbers", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
     {"name": "Cross-body mountain climbers", "quietable": 1, "ground":1, "bag": 0, "reversible":0, "opener":0},
     {"name": "SPEAR mountain climbers", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Boat extensions", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
@@ -53,8 +53,8 @@
     {"name": "Heel touches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Palm strike situps", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
 
-    {"name": "Extended plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
-    {"name": "Forearm plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Extended plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
+    {"name": "Forearm plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
     {"name": "Rotating plank", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
 
     {"name": "Calf raises", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
@@ -119,18 +119,27 @@
     {"name": "Jab, cross, hook, hook, sprawl", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Side kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Inverted Side kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Side kick shuffle phase 1", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Side kick shuffle phase 2", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Side kick shuffle phase 3", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Side kick shuffle phase 4", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Hook kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Direct hook kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Wheel kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Inverted Wheel kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Wheel kick shuffle phase 1", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Wheel kick shuffle phase 2", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Wheel kick shuffle phase 3", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Wheel kick shuffle phase 4", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Spinning wheel kick phase 1", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Spinning wheel kick phase 2", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Spinning side kick phase 1", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Spinning side kick phase 2", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Crossing wheel kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Crossing rear kick", "quietable": 1, "bag": 1, "reversible":1},
+    {"name": "Crossing side kick", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "MED BALL Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
@@ -142,8 +151,6 @@
     {"name": "Rear groin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear front kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead front kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Front snap kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Rear snap kick", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Lead groin kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead front kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
@@ -212,10 +219,9 @@
     {"name": "BALL twists", "quietable": 1, "ground": 1, "reversible":0, "ball":1},
     {"name": "BALL plank", "quietable": 1, "ground": 1, "reversible":0, "ball":1},
 
-    {"name": "Retsev", "quietable": 0, "ground": 0, "reversible":0, "ball":0},
     {"name": "Ground & pound", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
     {"name": "DL GROUND Jab, cross, hook, over", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
     {"name": "DL GROUND Jab, hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
     {"name": "DL GROUND Jab, hammer, hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0},
     {"name": "DL GROUND Jab, hammer, hammer, outer hammer", "quietable": 0, "ground": 1, "reversible":0, "ball":0}
-]}
+]

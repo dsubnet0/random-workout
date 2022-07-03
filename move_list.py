@@ -9,16 +9,15 @@ MOVE_LIST = [
     {"name": "PVC slips", "quietable": 1, "bag": 0, "pvc": 1, "reversible":0, "opener":0},
 
     {"name": "Pushups", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
-    {"name": "Wide pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":0},
-    {"name": "Diamond pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":0},
-    {"name": "Hindu pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":0},
-    {"name": "Dive-bomber pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":0},
-    {"name": "SPEAR pushup sequence", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":0},
+    {"name": "Wide pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
+    {"name": "Diamond pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
+    {"name": "Hindu pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
+    {"name": "Dive-bomber pushups", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
+    {"name": "SPEAR pushup sequence", "quietable": 1, "bag": 0, "pvc": 0, "reversible":0, "opener":1},
     {"name": "Box dips", "quietable": 1, "bag": 0, "box": 1, "reversible":0, "opener":0},
 
     {"name": "Squats", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "Squat hold", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
-    {"name": "Pistol squats", "quietable": 1, "bag": 0, "reversible":1, "opener":0},
     {"name": "Squat jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Tuck jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
@@ -32,8 +31,8 @@ MOVE_LIST = [
     {"name": "MED BALL Backward lunge with twist", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "Twisting lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
-    {"name": "Reaching crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
-    {"name": "Feet-raised crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Reaching crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
+    {"name": "Feet-raised crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
     {"name": "Candlestick crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Leg lifts", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Long-arm crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
@@ -137,9 +136,6 @@ MOVE_LIST = [
     {"name": "Spinning wheel kick phase 2", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Spinning side kick phase 1", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Spinning side kick phase 2", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Crossing wheel kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Crossing rear kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Crossing side kick", "quietable": 1, "bag": 1, "reversible":1},
 
     {"name": "Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "MED BALL Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
@@ -158,7 +154,6 @@ MOVE_LIST = [
     {"name": "Snap kick, wheel kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Snap kick, side kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Snap kick, hook kick", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Snap kick, side kick, rear kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Low wheel kick, high wheel kick", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "High wheel kick, low wheel kick", "quietable": 1, "bag": 1, "reversible":1},
 

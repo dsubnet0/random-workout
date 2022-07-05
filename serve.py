@@ -31,7 +31,9 @@ def add_move():
             'addmove.html'
             ) 
     else:
-
+        userdata = dict(request.form)
+        move_name = userdata['move_name']
+        is_opener = userdata['is_opener']
 
 
 

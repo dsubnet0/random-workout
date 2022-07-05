@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 from main import generate_workout, stringify_workout
 
@@ -23,5 +23,16 @@ def formatted_quiet_workout(number_of_rounds=18):
             'workout.html', 
             workout_array=generate_workout(number_of_rounds, quietable_only=True)
             )
+
+@app.route('/addmove', methods=['GET, POST'])
+def add_move():
+    if request.method == 'GET':
+        return render_template(
+            'addmove.html'
+            ) 
+    else:
+
+
+
 
 app.run(host='0.0.0.0', port=int(os.environ.get("PORT",5000)), debug=True)

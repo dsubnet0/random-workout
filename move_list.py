@@ -140,10 +140,6 @@ MOVE_LIST = [
     {"name": "KB bob and weave", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB squat and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB reverse lunge and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
-<<<<<<< HEAD:move_list.py
-    {"name": "KB two-handed swings high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
-=======
->>>>>>> chore/new_moves:move_list.json
     {"name": "KB lunging one-handed row", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
     
     {"name": "BAND: one-handed lateral raise", "quietable": 1, "band": 1, "reversible":1},

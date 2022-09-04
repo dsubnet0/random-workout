@@ -18,8 +18,6 @@ MOVE_LIST = [
 
     {"name": "Squats", "quietable": 1, "bag": 0, "reversible":0, "opener":1},
     {"name": "Squat hold", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
-    {"name": "Squat jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
-    {"name": "Tuck jumps", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
 
     {"name": "Forward lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
     {"name": "FIREFIGHTER CARRY Forward lunge", "quietable": 1, "bag": 0, "reversible":0, "opener":0},
@@ -41,6 +39,8 @@ MOVE_LIST = [
     {"name": "V-ups", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "Spiderman crunches", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
     {"name": "SPEAR situps", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Ab roller", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":0},
+    {"name": "Single-side ab carve", "quietable": 1, "bag": 0, "ground":1, "reversible":1, "opener":0},
 
     {"name": "Mountain climbers", "quietable": 1, "bag": 0, "ground":1, "reversible":0, "opener":1},
     {"name": "Cross-body mountain climbers", "quietable": 1, "ground":1, "bag": 0, "reversible":0, "opener":0},
@@ -72,16 +72,15 @@ MOVE_LIST = [
     {"name": "Lead upper", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear upper", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead knee", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Clinch Lead knee", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Ref 1 Lead knee", "quietable": 1, "bag": 1, "reversible":1},
+    #{"name": "Clinch Lead knee", "quietable": 1, "bag": 1, "reversible":1},
+    #{"name": "Ref 1 Lead knee", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear knee", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Clinch Rear knee", "quietable": 1, "bag": 1, "reversible":1},
-    {"name": "Ref 1 Rear knee", "quietable": 1, "bag": 1, "reversible":1},
+    #{"name": "Clinch Rear knee", "quietable": 1, "bag": 1, "reversible":1},
+    #{"name": "Ref 1 Rear knee", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Lead elbow", "quietable": 1, "bag": 1, "reversible":1},
     {"name": "Rear elbow", "quietable": 1, "bag": 1, "reversible":1},
 
-    {"name": "Standing switch knees", "quietable": 1, "bag": 1, "reversible":0},
-    {"name": "Clinch Switch knees", "quietable": 1, "bag": 1, "reversible":0},
+    {"name": "Switch knees", "quietable": 1, "bag": 1, "reversible":0},
     {"name": "MED BALL Switch knees", "quietable": 1, "bag": 1, "reversible":0},
     
     {"name": "Hook, cross, hook", "quietable": 1, "bag": 1, "reversible":1},
@@ -114,7 +113,6 @@ MOVE_LIST = [
 
     {"name": "Lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear roundhouse", "quietable": 0, "bag": 1, "reversible":1},
-    {"name": "MED BALL Rear roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead x-axis shin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Rear x-axis shin kick", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Lead front kick", "quietable": 1, "bag": 1, "reversible":1},
@@ -124,7 +122,6 @@ MOVE_LIST = [
     {"name": "Lead front kick, jab, cross", "quietable": 0, "bag": 1, "reversible":1},
 
     {"name": "Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
-    {"name": "MED BALL Low roundhouse, mid roundhouse, high roundhouse", "quietable": 0, "bag": 1, "reversible":1},
 
     {"name": "Jab, cross, roundhouse", "quietable": 0, "bag": 1, "reversible":1},
     {"name": "Cross, jab, lead roundhouse", "quietable": 0, "bag": 1, "reversible":1},
@@ -134,7 +131,6 @@ MOVE_LIST = [
     {"name": "KB alternating one-handed swing", "quietable": 1, "kb": 1, "reversible":0},
     {"name": "KB one-handed clean", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB one-handed thruster", "quietable": 1, "kb": 1, "reversible":1},
-    {"name": "KB one-handed swing high pull", "quietable": 1, "kb": 1, "reversible":1},
     {"name": "KB swings", "quietable": 1, "kb": 1, "reversible":0, "opener":1},
     {"name": "KB twist press", "quietable": 1, "kb": 1, "reversible":0},
     {"name": "KB deadlift", "quietable": 1, "kb": 1, "reversible":0},
@@ -144,7 +140,10 @@ MOVE_LIST = [
     {"name": "KB bob and weave", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB squat and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
     {"name": "KB reverse lunge and press", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
+<<<<<<< HEAD:move_list.py
     {"name": "KB two-handed swings high pull", "quietable": 1, "ground":0, "kb": 1, "reversible":0},
+=======
+>>>>>>> chore/new_moves:move_list.json
     {"name": "KB lunging one-handed row", "quietable": 1, "ground":0, "kb": 1, "reversible":1},
     
     {"name": "BAND: one-handed lateral raise", "quietable": 1, "band": 1, "reversible":1},

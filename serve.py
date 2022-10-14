@@ -14,7 +14,10 @@ def standard_workout(number_of_rounds=18):
 @app.route('/workout')
 @app.route('/workout/<int:number_of_rounds>')
 def formatted_workout(number_of_rounds=18):
-    return render_template('workout.html', workout_array=generate_workout(number_of_rounds))
+    return render_template(
+            'workout.html', 
+            workout_array=generate_workout(number_of_rounds)
+    )
 
 @app.route('/quietworkout')
 @app.route('/quietworkout/<int:number_of_rounds>')
@@ -22,7 +25,15 @@ def formatted_quiet_workout(number_of_rounds=18):
     return render_template(
             'workout.html', 
             workout_array=generate_workout(number_of_rounds, quietable_only=True)
-            )
+    )
+
+@app.route('/cardio')
+@app.route('/cardio/<int:number_of_rounds>')
+def formatted_cardio_workout(number_of_rounds=18):
+    return render_template(
+            'workout.html', 
+            workout_array=generate_workout(number_of_rounds, cardio_only=True)
+    )
 
 @app.route('/addmove', methods=['GET, POST'])
 def add_move():

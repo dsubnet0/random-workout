@@ -4,7 +4,7 @@ import random
 from move_list import MOVE_LIST
 
 
-def generate_workout(number_of_rounds=1, quietable_only=False, keep_balanced=True):
+def generate_workout(number_of_rounds=1, quietable_only=False, keep_balanced=True, cardio_only=False):
     my_workout = []
     move_list = MOVE_LIST
 
@@ -14,6 +14,8 @@ def generate_workout(number_of_rounds=1, quietable_only=False, keep_balanced=Tru
         next_move = ''
         if quietable_only:
             next_move = random.choice([m['name'] for m in move_list if 'quietable' in m and m['quietable']])
+        elif cardio_only:
+            next_move = random.choice([m['name'] for m in move_list if 'cardio' in m and m['cardio']])
         else:
             next_move = random.choice([m['name'] for m in move_list])
         my_workout.append(next_move)
@@ -33,10 +35,15 @@ def stringify_workout(workout_array):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--quietable', help='Quietable only', action='store_true')
+    parser.add_argument('--cardio', help='Cardio only', action='store_true')
     args = parser.parse_args()
 
     NUMBER_OF_ROUNDS = 18
     KEEP_BALANCED = True
-    my_workout = generate_workout(NUMBER_OF_ROUNDS, args.quietable, KEEP_BALANCED)
+    my_workout = generate_workout(
+                    number_of_rounds=NUMBER_OF_ROUNDS, 
+                    quietable_only=args.quietable, 
+                    keep_balanced=KEEP_BALANCED,
+                    cardio_only=args.cardio)
 
     print(stringify_workout(my_workout))

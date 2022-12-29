@@ -4,7 +4,7 @@ from flask import Flask, render_template, request
 
 from main import generate_workout, stringify_workout
 
-app = Flask('Doug''s Workout Generator')
+app = Flask('Doug''s Workout Generator', template_folder='/home/dsubnet0/random-workout/templates')
 
 @app.route('/raw')
 @app.route('/raw/<int:number_of_rounds>')
@@ -47,5 +47,5 @@ def add_move():
         is_opener = userdata['is_opener']
 
 
-
-app.run(host='0.0.0.0', port=int(os.environ.get("PORT",5000)), debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT',5000)), debug=True)

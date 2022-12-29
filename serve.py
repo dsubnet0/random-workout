@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, render_template, request
+from waitress import serve
 
 from main import generate_workout, stringify_workout
 
@@ -35,17 +36,7 @@ def formatted_cardio_workout(number_of_rounds=18):
             workout_array=generate_workout(number_of_rounds, cardio_only=True)
     )
 
-@app.route('/addmove', methods=['GET, POST'])
-def add_move():
-    if request.method == 'GET':
-        return render_template(
-            'addmove.html'
-            ) 
-    else:
-        userdata = dict(request.form)
-        move_name = userdata['move_name']
-        is_opener = userdata['is_opener']
 
-
-
-app.run(host='0.0.0.0', port=int(os.environ.get("PORT",5000)), debug=True)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=int(os.environ.get('PORT',8080)), debug=True, ssl_context='adhoc')
+    # serve(app, host='0.0.0.0', port=8080, debug=True)

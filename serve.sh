@@ -1,2 +1,2 @@
 export FLASK_APP=serve.py
-flask run --host=192.168.86.33
+flask run --host=0.0.0.0 --port=8080

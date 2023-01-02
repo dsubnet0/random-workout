@@ -4,7 +4,9 @@ from flask import Flask, render_template, request
 
 from main import generate_workout, stringify_workout
 
-app = Flask('Doug''s Workout Generator', template_folder='/home/dsubnet0/random-workout/templates')
+current_dir = os.path.dirname(__file__)
+template_folder = os.path.join(current_dir, 'templates')
+app = Flask('Doug''s Workout Generator', template_folder=template_folder)
 
 @app.route('/raw')
 @app.route('/raw/<int:number_of_rounds>')

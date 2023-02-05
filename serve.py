@@ -6,27 +6,28 @@ from main import generate_workout, stringify_workout
 
 current_dir = os.path.dirname(__file__)
 template_folder = os.path.join(current_dir, 'templates')
+move_list_file_url = 'https://www.dropbox.com/s/t928d8aroqxhfh9/move_list.json?dl=0'
 app = Flask('Doug''s Workout Generator', template_folder=template_folder)
 
 @app.route('/raw')
 @app.route('/raw/<int:number_of_rounds>')
 def standard_workout(number_of_rounds=18):
-    return stringify_workout(generate_workout(number_of_rounds))
+    return stringify_workout(
+            generate_workout(
+                number_of_rounds, 
+                move_list_url=move_list_file_url
+            )
+        )
 
 @app.route('/workout')
 @app.route('/workout/<int:number_of_rounds>')
 def formatted_workout(number_of_rounds=18):
     return render_template(
             'workout.html', 
-            workout_array=generate_workout(number_of_rounds)
-    )
-
-@app.route('/quietworkout')
-@app.route('/quietworkout/<int:number_of_rounds>')
-def formatted_quiet_workout(number_of_rounds=18):
-    return render_template(
-            'workout.html', 
-            workout_array=generate_workout(number_of_rounds, quietable_only=True)
+            workout_array=generate_workout(
+                            number_of_rounds, 
+                            move_list_url=move_list_file_url
+                        )
     )
 
 @app.route('/cardio')
@@ -34,19 +35,12 @@ def formatted_quiet_workout(number_of_rounds=18):
 def formatted_cardio_workout(number_of_rounds=18):
     return render_template(
             'workout.html', 
-            workout_array=generate_workout(number_of_rounds, cardio_only=True)
+            workout_array=generate_workout(
+                            number_of_rounds, 
+                            cardio_only=True, 
+                            move_list_url=move_list_file_url
+                        )
     )
-
-@app.route('/addmove', methods=['GET, POST'])
-def add_move():
-    if request.method == 'GET':
-        return render_template(
-            'addmove.html'
-            ) 
-    else:
-        userdata = dict(request.form)
-        move_name = userdata['move_name']
-        is_opener = userdata['is_opener']
 
 
 if __name__ == '__main__':

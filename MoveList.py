@@ -1,16 +1,19 @@
-from move_list import MOVE_LIST
-import random
-import requests
 import json
+import os
+import random
+
+import requests
+
 
 class MoveList():
 
     def __init__(self, move_list_url: str = None):
-        self.moves = self.get_moves(move_list_url)
+        self.get_moves(move_list_url)
     
 
     def get_moves(self, move_list_url):
         if move_list_url:
+            print(f'Getting move list from {move_list_url}')
             headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}
             web_result = requests.get(move_list_url, stream=True, headers=headers)
             with open('download.file', 'wb+') as f:
@@ -19,9 +22,14 @@ class MoveList():
                         f.write(chunk)
             with open('download.file', 'r') as f:
                 file_contents = f.read()
-                return json.loads(file_contents)
+                self.moves = json.loads(file_contents)
+            os.remove('download.file')
         else:
-            return MOVE_LIST
+            print(f'Using default move list')
+            with open('default_move_list.json', 'r') as f:
+                file_contents = f.read()
+                self.moves = json.loads(file_contents)
+
     
     def generate_workout(self, number_of_rounds=1, keep_balanced=True, cardio_only=False):
         my_workout = []
@@ -31,6 +39,7 @@ class MoveList():
         while len(my_workout) < number_of_rounds:
             next_move = ''
             if cardio_only:
+                print(f'Cardio-only mode')
                 next_move = random.choice([m['name'] for m in self.moves if 'cardio' in m and m['cardio']])
             else:
                 next_move = random.choice([m['name'] for m in self.moves])
@@ -44,5 +53,6 @@ class MoveList():
 
 
 if __name__ == '__main__':
-    m = MoveList('https://www.dropbox.com/s/t928d8aroqxhfh9/move_list.json?dl=0')
+    # m = MoveList('https://www.dropbox.com/s/t928d8aroqxhfh9/move_list.json?dl=0')
+    m = MoveList()
     print(m.moves)

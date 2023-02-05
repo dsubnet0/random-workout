@@ -1,13 +1,11 @@
 import argparse
-# import random
 
-# from move_list import MOVE_LIST
 from MoveList import MoveList
 
 
-def generate_workout(number_of_rounds=1, cardio_only=False):
-    my_move_list = MoveList()
-    return my_move_list.generate_workout(number_of_rounds, cardio_only)
+def generate_workout(number_of_rounds=1, cardio_only=False, move_list_url=None):
+    my_move_list = MoveList(move_list_url)
+    return my_move_list.generate_workout( number_of_rounds=number_of_rounds, cardio_only=cardio_only)
 
 
 def stringify_workout(workout_array):

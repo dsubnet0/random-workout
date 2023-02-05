@@ -13,5 +13,3 @@ Then go to localhost:5000/workout (or whatever endpoint)
 
 
 ## TODO
-- Instead of pulling moves from move_list.py, pull from a Google Sheet (or something)
-  - Some sort of "fall back to using local move_list.py"

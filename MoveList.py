@@ -1,5 +1,7 @@
 from move_list import MOVE_LIST
 import random
+import requests
+import json
 
 class MoveList():
 
@@ -9,7 +11,15 @@ class MoveList():
 
     def get_moves(self, move_list_url):
         if move_list_url:
-            pass
+            headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}
+            web_result = requests.get(move_list_url, stream=True, headers=headers)
+            with open('download.file', 'wb+') as f:
+                for chunk in web_result.iter_content(chunk_size=1024):
+                    if chunk:
+                        f.write(chunk)
+            with open('download.file', 'r') as f:
+                file_contents = f.read()
+                return json.loads(file_contents)
         else:
             return MOVE_LIST
     
@@ -31,3 +41,8 @@ class MoveList():
             ):
                 my_workout.append('OPPOSITE ' + next_move)
         return my_workout
+
+
+if __name__ == '__main__':
+    m = MoveList('https://www.dropbox.com/s/t928d8aroqxhfh9/move_list.json?dl=0')
+    print(m.moves)

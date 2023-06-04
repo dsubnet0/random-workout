@@ -31,7 +31,7 @@ class MoveList():
                 self.moves = json.loads(file_contents)
 
     
-    def generate_workout(self, number_of_rounds=1, keep_balanced=True, cardio_only=False):
+    def generate_workout(self, number_of_rounds=1, keep_balanced=True, cardio_only=False, ppl=None):
         my_workout = []
 
         my_workout.append(random.choice([m['name'] for m in self.moves if 'opener' in m and m['opener']]))
@@ -41,6 +41,9 @@ class MoveList():
             if cardio_only:
                 print(f'Cardio-only mode')
                 next_move = random.choice([m['name'] for m in self.moves if 'cardio' in m and m['cardio']])
+            elif ppl is not None:
+                print(f'{ppl} mode')
+                next_move = random.choice([m['name'] for m in self.moves if 'ppl' in m and m['ppl'] == ppl])
             else:
                 next_move = random.choice([m['name'] for m in self.moves])
             my_workout.append(next_move)

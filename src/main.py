@@ -3,9 +3,9 @@ import argparse
 from MoveList import MoveList
 
 
-def generate_workout(number_of_rounds=1, cardio_only=False, move_list_url=None):
+def generate_workout(number_of_rounds=1, cardio_only=False, move_list_url=None, ppl=None):
     my_move_list = MoveList(move_list_url)
-    return my_move_list.generate_workout( number_of_rounds=number_of_rounds, cardio_only=cardio_only)
+    return my_move_list.generate_workout( number_of_rounds=number_of_rounds, cardio_only=cardio_only, ppl=ppl)
 
 
 def stringify_workout(workout_array):

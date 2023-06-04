@@ -1,11 +1,12 @@
 import os
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 
 from main import generate_workout, stringify_workout
 
 current_dir = os.path.dirname(__file__)
-template_folder = os.path.join(current_dir, 'templates')
+template_folder = os.path.join(current_dir, '../templates')
+# template_folder = '../templates'
 move_list_file_url = 'https://www.dropbox.com/s/t928d8aroqxhfh9/move_list.json?dl=0'
 app = Flask('Doug''s Workout Generator', template_folder=template_folder)
 
@@ -39,6 +40,18 @@ def formatted_cardio_workout(number_of_rounds=18):
                             number_of_rounds, 
                             cardio_only=True, 
                             move_list_url=move_list_file_url
+                        )
+    )
+
+@app.route('/push')
+@app.route('/push/<int:number_of_rounds>')
+def formatted_push_workout(number_of_rounds=6):
+    return render_template(
+            'workout.html', 
+            workout_array=generate_workout(
+                            number_of_rounds, 
+                            move_list_url=move_list_file_url,
+                            ppl='push'
                         )
     )
 

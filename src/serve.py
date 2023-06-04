@@ -43,15 +43,15 @@ def formatted_cardio_workout(number_of_rounds=18):
                         )
     )
 
-@app.route('/push')
-@app.route('/push/<int:number_of_rounds>')
-def formatted_push_workout(number_of_rounds=6):
+@app.route('/ppl/<ppl>')
+@app.route('/ppl/<ppl>/<int:number_of_rounds>')
+def formatted_push_workout(ppl, number_of_rounds=6):
     return render_template(
             'workout.html', 
             workout_array=generate_workout(
                             number_of_rounds, 
                             move_list_url=move_list_file_url,
-                            ppl='push'
+                            ppl=ppl
                         )
     )
 

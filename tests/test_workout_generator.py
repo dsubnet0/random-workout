@@ -1,8 +1,5 @@
-import sys
-sys.path.append('./')
 from src.workout_generator import WorkoutGenerator
-from mock import patch, MagicMock, PropertyMock
-
+from mock import patch
 
 
 def test_init():

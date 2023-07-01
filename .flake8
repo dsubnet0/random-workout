@@ -1,0 +1,2 @@
+[flake8]
+exclude = reference_files

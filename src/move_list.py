@@ -8,14 +8,15 @@ import requests
 class MoveList():
 
     def __init__(self, move_list_url: str = None):
+        self._moves = {}
         self.retrieve_moves(move_list_url)
     
     @property
     def moves(self):
-        return self.moves
+        return self._moves
     
 
-    def retrieve_moves(self, move_list_url):
+    def retrieve_moves(self, move_list_url=None):
         if move_list_url:
             print(f'Getting move list from {move_list_url}')
             headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}
@@ -26,13 +27,20 @@ class MoveList():
                         f.write(chunk)
             with open('download.file', 'r') as f:
                 file_contents = f.read()
-                self.moves = json.loads(file_contents)
+                self._moves = json.loads(file_contents)
             os.remove('download.file')
         else:
             print(f'Using default move list')
-            with open('default_move_list.json', 'r') as f:
+            with open('reference_files/default_move_list.json', 'r') as f:
                 file_contents = f.read()
-                self.moves = json.loads(file_contents)
+                parsed_contents = {}
+                try:
+                    parsed_contents = json.loads(file_contents)
+                except Exception as e:
+                    print(f'Couldnt parse file contents: {e}')
+                    raise e
+                self._moves = parsed_contents
+
 
     
     def generate_workout(self, number_of_rounds=1, keep_balanced=True, cardio_only=False, ppl=None):

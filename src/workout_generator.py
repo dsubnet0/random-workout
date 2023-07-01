@@ -1,6 +1,8 @@
-from src.move_list import MoveList
 import random
 from typing import List
+
+from move_list import MoveList
+
 
 class WorkoutGenerator():
     def __init__(self) -> None:
@@ -15,8 +17,6 @@ class WorkoutGenerator():
                          ) -> List:
         pass
         my_workout = []
-        print('MOVE LIST:')
-        print(move_list.moves)
         my_workout.append(random.choice(
                 [ m['name'] for m in move_list.moves if 'opener' in m and m['opener'] ]
             )
@@ -39,7 +39,16 @@ class WorkoutGenerator():
             my_workout.append(next_move)
             if (keep_balanced 
                 and len(my_workout)<number_of_rounds 
-                and next_move in [m['name'] for m in self.moves if 'reversible' in m and m['reversible']]
+                and next_move in [m['name'] for m in move_list.moves if 'reversible' in m and m['reversible']]
             ):
                 my_workout.append('OPPOSITE ' + next_move)
         return my_workout
+
+    
+    def stringify_workout(self, workout_array):
+        return_string = ''
+        i=1
+        for m in workout_array:
+            return_string += f'{i}: {m}\n'    
+            i+=1
+        return return_string

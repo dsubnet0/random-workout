@@ -8,10 +8,14 @@ import requests
 class MoveList():
 
     def __init__(self, move_list_url: str = None):
-        self.get_moves(move_list_url)
+        self.retrieve_moves(move_list_url)
+    
+    @property
+    def moves(self):
+        return self.moves
     
 
-    def get_moves(self, move_list_url):
+    def retrieve_moves(self, move_list_url):
         if move_list_url:
             print(f'Getting move list from {move_list_url}')
             headers = {'user-agent': 'Wget/1.16 (linux-gnu)'}

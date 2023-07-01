@@ -8,7 +8,8 @@ verify_ssl = true
 [packages]
 gunicorn = "*"
 flask = "*"
-requests = "*"
+requests = ">=2.31"
+mock = "*"
 
 [requires]
 python_version = "3.7"

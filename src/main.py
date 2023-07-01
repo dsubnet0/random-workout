@@ -1,6 +1,6 @@
 import argparse
 
-from MoveList import MoveList
+from move_list import MoveList
 
 
 def generate_workout(number_of_rounds=1, cardio_only=False, move_list_url=None, ppl=None):

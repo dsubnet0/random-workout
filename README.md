@@ -1,5 +1,5 @@
 # random-workout
-Generate a variable length workout based on moves from a local JSON database.
+Generate a variable length workout based on moves from a local or Dropboxed JSON database.
 
 To run at commandline:
 
@@ -13,3 +13,4 @@ Then go to localhost:5000/workout (or whatever endpoint)
 
 
 ## TODO
+- Serve via waitress: https://flask.palletsprojects.com/en/2.3.x/deploying/waitress/ 

@@ -1,4 +1,4 @@
-from src.workout_generator import WorkoutGenerator
+from workout_generator import WorkoutGenerator
 from mock import patch
 
 

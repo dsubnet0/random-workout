@@ -1,6 +1,7 @@
 from serve import app
 from pytest import fixture
 
+
 @fixture(scope='module')
 def test_client():
     app.config['TESTING'] = True

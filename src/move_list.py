@@ -10,11 +10,10 @@ class MoveList():
     def __init__(self, move_list_url: str = None):
         self._moves = {}
         self.retrieve_moves(move_list_url)
-    
+
     @property
     def moves(self):
         return self._moves
-    
 
     def retrieve_moves(self, move_list_url=None):
         if move_list_url:
@@ -30,7 +29,7 @@ class MoveList():
                 self._moves = json.loads(file_contents)
             os.remove('download.file')
         else:
-            print(f'Using default move list')
+            print('Using default move list')
             with open('reference_files/default_move_list.json', 'r') as f:
                 file_contents = f.read()
                 parsed_contents = {}
@@ -41,28 +40,34 @@ class MoveList():
                     raise e
                 self._moves = parsed_contents
 
-
-    
     def generate_workout(self, number_of_rounds=1, keep_balanced=True, cardio_only=False, ppl=None):
         my_workout = []
 
-        my_workout.append(random.choice([m['name'] for m in self.moves if 'opener' in m and m['opener']]))
+        my_workout.append(
+            random.choice([m['name'] for m in self.moves if 'opener' in m and m['opener']])
+        )
 
         while len(my_workout) < number_of_rounds:
             next_move = ''
             if cardio_only:
-                print(f'Cardio-only mode')
-                next_move = random.choice([m['name'] for m in self.moves if 'cardio' in m and m['cardio']])
+                print('Cardio-only mode')
+                next_move = random.choice(
+                    [m['name'] for m in self.moves if 'cardio' in m and m['cardio']]
+                )
             elif ppl is not None:
                 print(f'{ppl} mode')
-                next_move = random.choice([m['name'] for m in self.moves if 'ppl' in m and m['ppl'] == ppl])
+                next_move = random.choice(
+                    [m['name'] for m in self.moves if 'ppl' in m and m['ppl'] == ppl]
+                )
             else:
                 next_move = random.choice([m['name'] for m in self.moves])
             my_workout.append(next_move)
-            if (keep_balanced 
-                and len(my_workout)<number_of_rounds 
-                and next_move in [m['name'] for m in self.moves if 'reversible' in m and m['reversible']]
-            ):
+            if (keep_balanced
+                and len(my_workout) < number_of_rounds
+                and next_move in [
+                    m['name'] for m in self.moves if 'reversible' in m and m['reversible']
+                ]
+                    ):
                 my_workout.append('OPPOSITE ' + next_move)
         return my_workout
 

@@ -15,7 +15,7 @@ if __name__ == '__main__':
     my_workout_generator = WorkoutGenerator()
     my_workout = my_workout_generator.generate_workout(
                     move_list=my_move_list,
-                    number_of_rounds=number_of_rounds, 
+                    number_of_rounds=number_of_rounds,
                     cardio_only=args.cardio)
 
     print(my_workout_generator.stringify_workout(my_workout))

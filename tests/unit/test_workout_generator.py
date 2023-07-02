@@ -7,7 +7,7 @@ def test_init():
     assert type(wg) is WorkoutGenerator
 
 
-@patch('src.workout_generator.MoveList')
+@patch('workout_generator.MoveList')
 def test_generate_workout(mock_movelist):
     mock_movelist.moves = [{'name': 'move1', 'opener': 1}]
     wg = WorkoutGenerator()

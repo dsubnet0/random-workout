@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "395bc0e9fac8959ac738c7f38c8af5ebbe1d6fcd6554c89ab55d54bd15f566fe"
+            "sha256": "db63be5cdafb08f4557afcebc2aae94bb3ec297c2a168b30671ab711a2e74d5d"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -233,14 +233,6 @@
             "index": "pypi",
             "version": "==5.0.2"
         },
-        "python-dotenv": {
-            "hashes": [
-                "sha256:1c93de8f636cde3ce377292818d0e440b6e45a82f215c3744979151fa8151c49",
-                "sha256:41e12e0318bebc859fcc4d97d4db8d20ad21721a6aa5047dd59f090391cb549a"
-            ],
-            "index": "pypi",
-            "version": "==0.21.1"
-        },
         "requests": {
             "hashes": [
                 "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f",
@@ -251,11 +243,11 @@
         },
         "typing-extensions": {
             "hashes": [
-                "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36",
-                "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
+                "sha256:5d8c9dac95c27d20df12fb1d97b9793ab8b2af8a3a525e68c80e21060c161771",
+                "sha256:935ccf31549830cda708b42289d44b6f74084d616a00be651601a4f968e77c82"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==4.7.1"
+            "version": "==4.7.0"
         },
         "urllib3": {
             "hashes": [
@@ -325,11 +317,11 @@
         },
         "typing-extensions": {
             "hashes": [
-                "sha256:440d5dd3af93b060174bf433bccd69b0babc3b15b1a8dca43789fd7f61514b36",
-                "sha256:b75ddc264f0ba5615db7ba217daeb99701ad295353c45f9e95963337ceeeffb2"
+                "sha256:5d8c9dac95c27d20df12fb1d97b9793ab8b2af8a3a525e68c80e21060c161771",
+                "sha256:935ccf31549830cda708b42289d44b6f74084d616a00be651601a4f968e77c82"
             ],
             "markers": "python_version < '3.8'",
-            "version": "==4.7.1"
+            "version": "==4.7.0"
         },
         "zipp": {
             "hashes": [

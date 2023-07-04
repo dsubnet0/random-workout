@@ -11,6 +11,7 @@ gunicorn = "*"
 flask = "*"
 requests = ">=2.31"
 mock = "*"
+python-dotenv = "*"
 
 [requires]
 python_version = "3.7"

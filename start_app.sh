@@ -1,0 +1,1 @@
+flask --app ./src/serve.py run

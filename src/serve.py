@@ -4,7 +4,7 @@ from flask import Flask, render_template
 
 from move_list import MoveList
 from workout_generator import WorkoutGenerator
-from ..cfg.dougs_settings import MOVE_LIST_FILE_URL
+from dougs_settings import MOVE_LIST_FILE_URL
 
 
 current_dir = os.path.dirname(__file__)

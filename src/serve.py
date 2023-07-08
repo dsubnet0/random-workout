@@ -4,14 +4,17 @@ from flask import Flask, render_template
 
 from move_list import MoveList
 from workout_generator import WorkoutGenerator
+from ..cfg.dougs_settings import MOVE_LIST_FILE_URL
 
 
 current_dir = os.path.dirname(__file__)
 template_folder = os.path.join(current_dir, '../templates')
 
 app = Flask('Doug''s Workout Generator', template_folder=template_folder)
-if 'RANDOM_WORKOUT_APPLIATION' in os.environ:
+if 'RANDOM_WORKOUT_APPLICATION' in os.environ:
     app.config.from_envvar('RANDOM_WORKOUT_APPLICATION_SETTINGS')
+else:
+    app.config['MOVE_LIST_FILE_URL'] = MOVE_LIST_FILE_URL
 wg = WorkoutGenerator()
 
 
